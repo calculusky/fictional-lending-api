@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "API service for the assessment of Lendsqr",
   "main": "index.js",
+  "engines": {
+    "node": "16.0.0",
+    "npm": "7.10.0"
+  },
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles",
     "start": "npm run build && cross-env NODE_ENV=production node src/dist/index.js",
