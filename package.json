@@ -11,9 +11,7 @@
     "test": "jest --forceExit --detectOpenHandles",
     "start": "npm run build && cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development ts-node-dev ./index.ts",
-    "build": "rimraf dist && tsc",
-    "test:coverage": "jest --coverage",
-    "test:watch": "yarn test --watch"
+    "build": "rimraf dist && tsc"
   },
   "keywords": [],
   "author": "Chinedum",
