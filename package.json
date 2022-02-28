@@ -11,7 +11,9 @@
     "test": "jest --forceExit --detectOpenHandles",
     "start": "npm run build && cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development ts-node-dev ./index.ts",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "test:coverage": "jest --coverage",
+    "test:watch": "yarn test --watch"
   },
   "keywords": [],
   "author": "Chinedum",
@@ -31,8 +33,8 @@
     "rimraf": "^3.0.2",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.3.0",
-    "ts-node-dev": "^1.1.8",
     "tslib": "^2.3.1",
+    "typescript": "^4.5.5",
     "validator": "^13.7.0"
   },
   "devDependencies": {
@@ -53,7 +55,8 @@
     "supertest": "^6.2.2",
     "ts-jest": "^27.1.3",
     "ts-node": "^10.5.0",
-    "typescript": "^4.5.5"
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.12.0"
   },
   "repository": {
     "type": "git",

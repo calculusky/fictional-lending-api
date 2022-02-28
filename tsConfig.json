@@ -25,6 +25,11 @@
     "resolveJsonModule": true,
     "importHelpers": true
   },
+  "include": [
+    "**/*.ts",
+    "**/*.json",
+    ".env"
+  ],
   "exclude": [
     "node_modules",
     "dist"

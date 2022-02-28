@@ -25,18 +25,18 @@ describe('Testing Authentication', () => {
         });
     });
 
-    describe('[POST] /auth/login', () => {
-        it('response should have return the Authorization token', async () => {
-            const userData: LoginInput = {
-                email: 'test@email.com',
-                password: 'q1w2e3r4',
-            };
+    // describe('[POST] /auth/login', () => {
+    //     it('response should have return the Authorization token', async () => {
+    //         const userData: LoginInput = {
+    //             email: 'test@email.com',
+    //             password: 'q1w2e3r4',
+    //         };
 
-            return request(server)
-                .post('/api/auth/login')
-                .send(userData)
-                .expect(200);
-        });
-    });
+    //         return request(server)
+    //             .post('/api/auth/login')
+    //             .send(userData)
+    //             .expect(200);
+    //     });
+    // });
 
 });
