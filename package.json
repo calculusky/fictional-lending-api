@@ -8,6 +8,7 @@
     "npm": "7.10.0"
   },
   "scripts": {
+    "test": "jest --forceExit --detectOpenHandles",
     "start": "npm run build && cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development ts-node-dev ./index.ts",
     "build": "rimraf dist && tsc"
