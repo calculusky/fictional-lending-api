@@ -1,10 +1,10 @@
-import { CreateUser, DataStoredInToken, LoginInput } from '../../interfaces/auth';
-import { User, Wallet } from '../../interfaces/model';
+import { CreateUser, DataStoredInToken, LoginInput } from '../interfaces/auth';
+import { User, Wallet } from '../interfaces/model';
 import bcrypt from 'bcrypt';
-import knex from '../../database/knex';
-import { HttpException } from '../../exceptions/httpException';
+import knex from '../database/knex';
+import { HttpException } from '../exceptions/httpException';
 import jwt from 'jsonwebtoken';
-import { secretKey } from '../../config/config';
+import { secretKey } from '../config/config';
 
 
 

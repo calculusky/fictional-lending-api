@@ -1,13 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
 import { isEmail, isAlpha, isAlphanumeric, normalizeEmail } from 'validator';
-import { HttpException } from '../../exceptions/httpException';
-import { CreateUser, DataStoredInToken, LoginInput, RequestWithCreateUser, RequestWithUser } from '../../interfaces/auth';
-import { formatName } from '../../utils/helper';
+import { HttpException } from '../exceptions/httpException';
+import { CreateUser, DataStoredInToken, LoginInput, RequestWithCreateUser, RequestWithUser } from '../interfaces/auth';
+import { formatName } from '../utils/helper';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { secretKey } from '../../config/config';
-import AuthService from '../../services/auth/auth';
-import { User } from '../../interfaces/model';
+import { secretKey } from '../config/config';
+import AuthService from '../services/auth';
+import { User } from '../interfaces/model';
 
 
 

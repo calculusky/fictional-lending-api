@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import TransactionController from '../../controllers/transaction/transaction'
-import AuthMiddleware from '../../middlewares/auth/auth';
+import TransactionController from '../controllers/transaction'
+import AuthMiddleware from '../middlewares/auth';
 
 
 class TransactionRoute {

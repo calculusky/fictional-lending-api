@@ -8,7 +8,7 @@ import fs from 'fs';
 import { connection } from './config/config';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import errorMiddleware from './middlewares/error/error';
+import errorMiddleware from './middlewares/error';
 import path from 'path';
 
 
@@ -46,17 +46,12 @@ class App {
 
     //register routes
     private initializeRoutes() {
-        let routePath = `${__dirname}/routes`;
-        fs.readdirSync(path.join(routePath)).forEach(dir => {
-            if (fs.statSync(path.join(`${routePath}/${dir}`)).isDirectory()) {
-                const filePath = `${routePath}/${dir}`;
-                fs.readdirSync(path.join(filePath)).forEach(route => {
-                    const theRoute = route.split('.')[0];
-                    const ControllerRoute = require(path.join(`${filePath}/${theRoute}`));
-                    const ctrlRoute = new ControllerRoute();
-                    this.app.use('/api', ctrlRoute.router);
-                })
-            }
+        const routePath = './routes';
+        fs.readdirSync(routePath).forEach(route => {
+            const theRoute = route.split('.')[0];
+            const ControllerRoute = require(`${routePath}/${theRoute}`);
+            const ctrlRoute = new ControllerRoute();
+            this.app.use('/api', ctrlRoute.router)
         })
     }
 

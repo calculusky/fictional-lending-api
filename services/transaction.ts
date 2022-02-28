@@ -1,7 +1,7 @@
-import { transCode } from '../../config/config';
-import knex from '../../database/knex';
-import { HttpException } from '../../exceptions/httpException';
-import { Transaction, User } from '../../interfaces/model';
+import { transCode } from '../config/config';
+import knex from '../database/knex';
+import { HttpException } from '../exceptions/httpException';
+import { Transaction, User } from '../interfaces/model';
 
 
 class TransactionService {

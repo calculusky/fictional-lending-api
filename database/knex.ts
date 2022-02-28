@@ -1,5 +1,5 @@
-import { knex, Knex} from "knex";
-import knexfile from "../../knexfile";
+import { knex, Knex } from "knex";
+import knexfile from "../knexfile";
 
 
 const environment = process.env.NODE_ENV;

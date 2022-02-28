@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { CreateUser, LoginInput, RequestWithCreateUser } from '../../interfaces/auth';
-import AuthService from '../../services/auth/auth';
+import { CreateUser, LoginInput, RequestWithCreateUser } from '../interfaces/auth';
+import AuthService from '../services/auth';
 
 
 class AuthController {

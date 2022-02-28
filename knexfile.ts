@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 config();
-import { connection } from './src/config/config';
+import { connection } from './config/config';
 
 
 const db = connection.db;

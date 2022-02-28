@@ -1,8 +1,8 @@
 import { Response, NextFunction } from 'express';
-import { RequestWithUser } from '../../interfaces/auth';
-import { FundPayload } from '../../interfaces/transaction';
-import TransactionService from '../../services/transaction/transaction';
-import { HttpException } from '../../exceptions/httpException';
+import { RequestWithUser } from '../interfaces/auth';
+import { FundPayload } from '../interfaces/transaction';
+import TransactionService from '../services/transaction';
+import { HttpException } from '../exceptions/httpException';
 
 
 
