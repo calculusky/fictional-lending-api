@@ -9,7 +9,7 @@ import { connection } from './config/config';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import errorMiddleware from './middlewares/error';
-import path from 'path';
+
 
 
 
