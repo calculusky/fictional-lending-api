@@ -23,14 +23,10 @@
     "noEmit": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "importHelpers": true,
-    "baseUrl": "./"
+    "importHelpers": true
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "**/*.test.*",
-    "**/*.spec.*",
-    "test"
+    "dist"
   ]
 }
