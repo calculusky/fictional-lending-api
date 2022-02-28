@@ -1,7 +1,7 @@
 module.exports = {
     moduleDirectories: ["node_modules"],
     collectCoverageFrom: [
-        "**/*.{ts,tsx,js,jsx}"
+        "**/*.{ts,tsx,js}"
     ],
     reporters: ["default"],
 

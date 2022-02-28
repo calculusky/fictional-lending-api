@@ -12,7 +12,6 @@ import errorMiddleware from './middlewares/error';
 
 
 
-
 class App {
     public app: express.Application
     constructor() {
