@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { isEmail, isAlpha, isAlphanumeric, normalizeEmail } from 'validator';
 import { HttpException } from '../exceptions/httpException';
 import { CreateUser, DataStoredInToken, LoginInput, RequestWithCreateUser, RequestWithUser } from '../interfaces/auth';
-import { formatName } from '../utils/helper';
+import { formatName } from '../utilities/helper';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { secretKey } from '../config/config';
