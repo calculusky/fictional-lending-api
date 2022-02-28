@@ -35,7 +35,7 @@ class App {
 
     public listen() {
         this.app.listen(connection.app.port, () => {
-            console.log(`> Ready on ${connection.app.port}`);
+            console.log(`> Ready on ${process.env.PORT || 6500}`);
         })
     }
 
