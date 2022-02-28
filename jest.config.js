@@ -1,7 +1,7 @@
 module.exports = {
     moduleDirectories: ["node_modules"],
     collectCoverageFrom: [
-        "**/*.{ts,tsx,js,jsx}"
+        "**/*.{ts,js}"
     ],
     reporters: ["default"],
 
@@ -17,7 +17,7 @@ module.exports = {
     testEnvironment: "node",
     testMatch: [
         "**/__tests__/**/*.+(ts|tsx|js)",
-        "**/?(*.)(spec|test).+(ts|tsx|js)"
+        "**/?(*.)(spec|test).+(ts|js)"
     ],
     transform: {
         "^.+\\.(ts|tsx)$": "ts-jest"
