@@ -9,7 +9,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    // "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true,
     // "experimentalDecorators": true,
     // "emitDecoratorMetadata": true,
     // "forceConsistentCasingInFileNames": true,
@@ -19,12 +19,12 @@
     // "sourceMap": true,
     // "declaration": true,
     "outDir": "./dist",
-    "allowJs": true
+    "allowJs": true,
     // "noEmit": false,
     // "esModuleInterop": true,
     // "resolveJsonModule": true,
     // "importHelpers": true,
-    // "baseUrl": "./"
+    "baseUrl": "./"
   },
   "exclude": [
     "node_modules",
