@@ -1,13 +1,10 @@
 
 
-const { DB_HOST, DB_DATABASE, DB_PORT, DB_USER, DB_PASS, APP_PORT, JWT_SECRET } = process.env;
+const { DB_HOST, DB_DATABASE, DB_PORT, DB_USER, DB_PASS, JWT_SECRET } = process.env;
 
 
 //env variables
 export const connection = {
-    app: {
-        port: APP_PORT || 6500
-    },
     db: {
         host: DB_HOST,
         database: DB_DATABASE,

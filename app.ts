@@ -1,11 +1,8 @@
-import { config } from 'dotenv';
-config();
 import express from 'express';
 import helmet from 'helmet';
 import compression from 'compression';
 import cors from 'cors';
 import fs from 'fs';
-import { connection } from './config/config';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import errorMiddleware from './middlewares/error';
@@ -13,11 +10,14 @@ import errorMiddleware from './middlewares/error';
 
 
 class App {
-    public app: express.Application
+    public app: express.Application;
+    public port: string | number;
+
+
     constructor() {
         this.app = express();
+        this.port = process.env.PORT;
 
-        // this.connectToDatabase()
         this.initializeMiddlewares();
         this.initializeRoutes();
         this.initializeSwagger();
@@ -34,8 +34,8 @@ class App {
     }
 
     public listen() {
-        this.app.listen(connection.app.port, () => {
-            console.log(`> Ready on ${process.env.PORT || 6500}`);
+        this.app.listen(this.port, () => {
+            console.log(`> Ready on ${this.port}`);
         })
     }
 
